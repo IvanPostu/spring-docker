@@ -1,25 +1,14 @@
 version: '3'
 services:
-  # db:
-  #   build:
-  #     context: ./docker
-  #     dockerfile: postgres.Dockerfile
-  #   container_name: simple_spring_db
-  #   ports:
-  #     - 5432:5432
-  #   volumes:
-  #     - ./pg_data:/var/lib/postgresql/data/pgdata
-  #   environment:
-  #     POSTGRES_PASSWORD: qwerty
-  #     PGDATA: /var/lib/postgresql/data/pgdata
-  #   restart: always
-
   backend: 
+    env_file:
+      - docker/dev/backend-variables.env
     build:
       context: .
       dockerfile: docker/java.Dockerfile
     container_name: simple_spring_backend
     ports:
       - 8080:8080
+      - 5005:5005
     restart: always
 

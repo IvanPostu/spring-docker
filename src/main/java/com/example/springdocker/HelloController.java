@@ -10,6 +10,9 @@ public class HelloController {
   @GetMapping("/")
   @ResponseBody
   public String sayHello(){
+    char c = 'a';
+    System.out.println("Hello");
+
     return "hello";
   }
 

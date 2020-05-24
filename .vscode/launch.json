@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "type": "java",
+    //   "name": "Debug (Launch) - Current File",
+    //   "request": "launch",
+    //   "mainClass": "${file}"
+    // },
+    // {
+    //   "type": "java",
+    //   "name": "Debug (Launch)-DemoApplication<spring-docker>",
+    //   "request": "launch",
+    //   "mainClass": "com.example.springdocker.DemoApplication",
+    //   "projectName": "spring-docker"
+    // },
+    {
+      "type": "java",
+      "name": "Debug (Attach)",
+      "projectName": "spring-docker",
+      "request": "attach",
+      "hostName": "127.0.0.1",
+      "port": 5005
+  }
+  ]
+}

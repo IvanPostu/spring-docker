@@ -1,14 +1,18 @@
 version: '3'
 services:
-  backend: 
-    env_file:
-      - docker/dev/backend-variables.env
+  backend:
     build:
       context: .
-      dockerfile: docker/java.Dockerfile
-    container_name: simple_spring_backend
+      dockerfile: docker/dev/java.Dockerfile
+    env_file:
+      - docker/dev/backend-variables.env
+    container_name: spring_project
     ports:
       - 8080:8080
       - 5005:5005
+      - 8787:8787
+      - 9090:9090
+    volumes:
+      - ./:/project
+      - /home/ivan/.m2:/root/.m2
     restart: always
-

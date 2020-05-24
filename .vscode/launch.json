@@ -7,13 +7,13 @@
     //   "request": "launch",
     //   "mainClass": "${file}"
     // },
-    // {
-    //   "type": "java",
-    //   "name": "Debug (Launch)-DemoApplication<spring-docker>",
-    //   "request": "launch",
-    //   "mainClass": "com.example.springdocker.DemoApplication",
-    //   "projectName": "spring-docker"
-    // },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-DemoApplication<spring-docker>",
+      "request": "launch",
+      "mainClass": "com.example.springdocker.DemoApplication",
+      "projectName": "spring-docker"
+    },
     {
       "type": "java",
       "name": "Debug (Attach)",
